@@ -25,6 +25,11 @@ body {
     box-shadow: inset 5px 5px 5px rgba(00, 00, 00, 0.25);
     border-radius: 10px;
     background-color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+    font-size: 50px;
 }
 
 .row {
@@ -36,8 +41,10 @@ body {
 .all-clear,
 .clear-last,
 .operator,
+.percent,
 .number,
-.decimal {
+.decimal, 
+.equality {
     width: 100px;
     height: 100px;
     display: flex;
@@ -47,7 +54,8 @@ body {
     border-radius: 10px;
 }
 
-.zero {
+.zero,
+.all-clear {
     flex-grow: 2;
 }
 
@@ -61,10 +69,21 @@ body {
     background-color: #ECE2E2;
 }
 
-.operator {
+.operator,
+.percent {
     background-color: #DEE3BF;
 }
 
-.operator.equality {
+.equality {
     background-color: #C6D9C4;
+}
+
+.all-clear:hover,
+.clear-last:hover,
+.operator:hover,
+.percent:hover,
+.number:hover,
+.decimal:hover, 
+.equality:hover {
+    box-shadow: inset 3px 3px 5px rgba(00, 00, 00, 0.1);
 }
